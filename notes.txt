@@ -1,0 +1,27 @@
+initalize project 
+npm init or npm init -y
+
+install dependencies
+npm install uuid cors body-parser express cookie-parser sequelize nodemon
+
+install joi for validation
+
+src
+  api
+    contact
+	index.ts
+	contact.js
+	modelContact.js
+  helpers
+	utility.js
+
+  configuration
+	default
+	prod.js
+	dev.js
+
+
+.env
+app.js
+index.js
+db.js

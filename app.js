@@ -14,8 +14,8 @@ export function intializeApp(app) {
   
   app.use("/api/v1", unguardedRoute);
   
-  app.use(authmiddleware)//routes defined after this are guarded
+  // app.use(authmiddleware)//routes defined after this are guarded
   
-  app.use("/api/v1", guardedRoute);
+  // app.use("/api/v1", guardedRoute);
 }
 

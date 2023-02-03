@@ -5,6 +5,11 @@ install dependencies
 npm install uuid cors body-parser express cookie-parser sequelize nodemon
 
 install joi for validation
+install morgan for details
+
+learn about pool library
+
+learn about helmet if required
 
 src
   api

@@ -1,9 +1,9 @@
-const uuid = require('uuid')
-const users = []
+import { v4 } from 'uuid'
+export const users = []
 
-class User{
+export class User{
     constructor(fName,lName,isActive,contacts){
-        this.id = uuid.v4()
+        this.id = v4()
         this.fName = fName
         this.lName = lName
         this.isAdmin = true
@@ -14,4 +14,5 @@ class User{
         users.push(this)
     }
 }
-module.exports = {User,users}
+
+// module.exports = {User,users}

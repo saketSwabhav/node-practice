@@ -1,7 +1,7 @@
 import v from '../../config/validationData';
 import {Request, Response, NextFunction} from 'express';
 import Joi from 'joi';
-import {validatorFunc} from '../../helpers/utility';
+import {validatorFunc} from '../../helpers/utility.js';
 
 
 

@@ -1,9 +1,7 @@
 import {Router} from "express";
-import contactRoute from "./contact/controller/index";
+import contactRoute from "./contact/controller/index.js";
  
-const indexRoute = Router(); 
+export const unguardedRoute = Router(); 
+export const guardedRoute = Router(); 
  
-indexRoute.use("/contact", contactRoute); 
-
-
-export default indexRoute;
+unguardedRoute.use("/contact", contactRoute); 

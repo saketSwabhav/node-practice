@@ -1,47 +1,65 @@
-import {getBalance} from '../../helper/utility';
+import {User,users} from "../../../view/user.js";
 
 
-export const addContact = async(req, res, next ) =>{
+export const addUser = async(req, res, next ) =>{
 
     //joi - vlaidations
 
     try{
-
-        const {userId} = req.params;
+        // const {userId} = req.params;
         
         if(!Object.keys(req.body).length) {
-            resp.status(400).send("body cannot be empty")
+            res.status(400).send("body cannot be empty")
         }
         let {fName,lName,isActive,contacts}= req.body
-        new User.User(fName,lName,isActive,contacts).insert()
-        console.log(User.users);
-        resp.status(200).send()
+        new User(fName,lName,isActive,contacts).insert()
+        console.log(users);
+        res.status(200).send(users)
 
     }catch(e){
-
+        console.error(e);
     }
 }
 
 
-export const getContact = async(req, res, next ) =>{
+export const getUsers = async(req, res, next ) =>{
 
     //joi - vlaidations
 
     try{
 
-
-        const bal = await getBalance();
-
-        
-        if(!Object.keys(req.body).length) {
-            resp.status(400).send("body cannot be empty")
-        }
-        let {fName,lName,isActive,contacts}= req.body
-        new User.User(fName,lName,isActive,contacts).insert()
-        console.log(User.users);
-        resp.status(200).send()
+        console.log(users);
+        res.status(200).send(users)
 
     }catch(e){
+        console.error(e);
+    }
+}
 
+export const updateUser = async(req, res, next ) =>{
+
+    //joi - vlaidations
+
+    try{
+
+        console.log(users);
+        res.status(200).send(users)
+
+    }catch(e){
+        console.error(e);
+    }
+}
+
+export const deleteUser = async(req, res, next ) =>{
+
+    //joi - vlaidations
+
+    try{
+
+        console.log(users);
+        res.status(200).send(users)
+
+    }catch(e){
+        console.error(e);
     }
 }
